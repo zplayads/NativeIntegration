@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Zplay View Controller-->
         <scene sceneID="wQg-tq-qST">
             <objects>
                 <viewController id="whP-gf-Uak" customClass="ZplayViewController" sceneMemberID="viewController">
@@ -20,8 +20,70 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2R-Fg-UZg">
+                                <rect key="frame" x="37.5" y="140" width="300" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="DyC-WP-zDp"/>
+                                    <constraint firstAttribute="height" constant="200" id="v4W-A3-KwW"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0x-jg-VWY">
+                                <rect key="frame" x="37.5" y="370" width="300" height="26"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H0x-jg-VWY" secondAttribute="height" multiplier="23:2" id="daU-LO-Qf9"/>
+                                </constraints>
+                                <state key="normal" title="LoadAd">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadAd:" destination="whP-gf-Uak" eventType="touchUpInside" id="7ta-IO-KUw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph4-O1-vXQ">
+                                <rect key="frame" x="37.5" y="401" width="300" height="26"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="RegisterAndShowAd">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerAndShowAd:" destination="whP-gf-Uak" eventType="touchUpInside" id="ddn-eV-jXs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mw9-Xf-lFS">
+                                <rect key="frame" x="37.5" y="432" width="300" height="26.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="RemoveAndDestoryAd">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerAndShowAd:" destination="whP-gf-Uak" eventType="touchUpInside" id="edS-wi-hsQ"/>
+                                    <action selector="removeAndDestoryAd:" destination="whP-gf-Uak" eventType="touchUpInside" id="CSE-8O-uct"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H0x-jg-VWY" firstAttribute="width" secondItem="G2R-Fg-UZg" secondAttribute="width" id="1rh-Tx-2OU"/>
+                            <constraint firstItem="H0x-jg-VWY" firstAttribute="top" secondItem="G2R-Fg-UZg" secondAttribute="bottom" constant="30" id="3LB-dO-wlQ"/>
+                            <constraint firstItem="Ph4-O1-vXQ" firstAttribute="height" secondItem="H0x-jg-VWY" secondAttribute="height" id="70d-JB-pkg"/>
+                            <constraint firstItem="G2R-Fg-UZg" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="8SN-PU-htb"/>
+                            <constraint firstItem="Ph4-O1-vXQ" firstAttribute="centerX" secondItem="H0x-jg-VWY" secondAttribute="centerX" id="8Xm-IK-iN0"/>
+                            <constraint firstItem="Ph4-O1-vXQ" firstAttribute="width" secondItem="H0x-jg-VWY" secondAttribute="width" id="BHm-w1-2wh"/>
+                            <constraint firstItem="Ph4-O1-vXQ" firstAttribute="top" secondItem="H0x-jg-VWY" secondAttribute="bottom" constant="5" id="Iiy-jS-CkA"/>
+                            <constraint firstItem="mw9-Xf-lFS" firstAttribute="width" secondItem="Ph4-O1-vXQ" secondAttribute="width" id="Mmi-ke-TcS"/>
+                            <constraint firstItem="mw9-Xf-lFS" firstAttribute="top" secondItem="Ph4-O1-vXQ" secondAttribute="bottom" constant="5" id="Q8d-6N-3lY"/>
+                            <constraint firstItem="mw9-Xf-lFS" firstAttribute="height" secondItem="Ph4-O1-vXQ" secondAttribute="height" id="aai-MT-EUd"/>
+                            <constraint firstItem="G2R-Fg-UZg" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="120" id="hEz-sQ-gPa"/>
+                            <constraint firstItem="H0x-jg-VWY" firstAttribute="centerX" secondItem="G2R-Fg-UZg" secondAttribute="centerX" id="wA4-PO-f47"/>
+                            <constraint firstItem="mw9-Xf-lFS" firstAttribute="centerX" secondItem="Ph4-O1-vXQ" secondAttribute="centerX" id="yve-B1-XZN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nativeAdBackgroundView" destination="G2R-Fg-UZg" id="y5r-Vk-eD8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

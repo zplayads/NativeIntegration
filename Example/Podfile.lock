@@ -1,0 +1,16 @@
+PODS:
+  - NativeIntegration (0.1.0)
+
+DEPENDENCIES:
+  - NativeIntegration (from `../`)
+
+EXTERNAL SOURCES:
+  NativeIntegration:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NativeIntegration: fb60e0650de793d0c795426042b0e49965cdfb35
+
+PODFILE CHECKSUM: 1994262e9f6204e569acc4c68456de7482762536
+
+COCOAPODS: 1.6.1

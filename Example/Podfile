@@ -1,9 +1,13 @@
+source "https://github.com/CocoaPods/Specs"
+source "https://github.com/yumimobi/Specs"
 use_frameworks!
 
 platform :ios, '8.0'
 
 target 'NativeIntegration_Example' do
   pod 'NativeIntegration', :path => '../'
+  pod 'YumiMediationSDK'
+  pod 'YumiMediationAdapters'
 
   target 'NativeIntegration_Tests' do
     inherit! :search_paths
