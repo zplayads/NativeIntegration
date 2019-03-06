@@ -59,7 +59,6 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="registerAndShowAd:" destination="whP-gf-Uak" eventType="touchUpInside" id="edS-wi-hsQ"/>
                                     <action selector="removeAndDestoryAd:" destination="whP-gf-Uak" eventType="touchUpInside" id="CSE-8O-uct"/>
                                 </connections>
                             </button>
