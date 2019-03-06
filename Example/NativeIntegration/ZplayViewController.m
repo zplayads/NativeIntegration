@@ -33,45 +33,41 @@
 }
 
 - (IBAction)registerAndShowAd:(id)sender {
-//    self.zplayNativeView = [[NSBundle mainBundle] loadNibNamed:@"ZplayNativeView" owner:nil options:nil].firstObject;
-//    self.zplayNativeView.frame = self.nativeAdBackgroundView.frame;
-//
-//    if (!self.nativeAdArray || [self.nativeAdArray.firstObject isExpired]) {
-//        NSLog(@"native ad is invalid");
-//        return;
-//    }
-//    self.zplayNativeView.icon.image = self.nativeAdArray.firstObject.icon.image;
-//    self.zplayNativeView.title.text = self.nativeAdArray.firstObject.title;
-//    self.zplayNativeView.coverImage.image = self.nativeAdArray.firstObject.coverImage.image;
-//    self.zplayNativeView.callToAction.text = self.nativeAdArray.firstObject.callToAction;
-//
-//    [self.nativeAd registerViewForInteraction:self.zplayNativeView
-//                              clickableAssetViews:@{
-//                                                    YumiMediationUnifiedNativeTitleAsset : self.zplayNativeView.title,
-//                                                    YumiMediationUnifiedNativeCoverImageAsset : self.zplayNativeView.coverImage,
-//                                                    YumiMediationUnifiedNativeIconAsset : self.zplayNativeView.icon,
-//                                                    YumiMediationUnifiedNativeCallToActionAsset : self.zplayNativeView.callToAction
-//                                                    }
-//                               withViewController:self
-//                                         nativeAd:self.nativeAdArray.firstObject];
-//    [self.nativeAd reportImpression:self.nativeAdArray.firstObject view:self.zplayNativeView];
-//
-//    [self.view addSubview:self.zplayNativeView];
-    
-    self.view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    self.view1.backgroundColor = [UIColor redColor];
-    [self.view addSubview:self.view1];
-    
+    self.zplayNativeView = [[NSBundle mainBundle] loadNibNamed:@"ZplayNativeView" owner:nil options:nil].firstObject;
+    self.zplayNativeView.frame = self.nativeAdBackgroundView.frame;
+
+    if (!self.nativeAdArray || [self.nativeAdArray.firstObject isExpired]) {
+        NSLog(@"native ad is invalid");
+        return;
+    }
+    self.zplayNativeView.icon.image = self.nativeAdArray.firstObject.icon.image;
+    self.zplayNativeView.title.text = self.nativeAdArray.firstObject.title;
+    self.zplayNativeView.coverImage.image = self.nativeAdArray.firstObject.coverImage.image;
+    self.zplayNativeView.callToAction.text = self.nativeAdArray.firstObject.callToAction;
+
+    [self.nativeAd registerViewForInteraction:self.zplayNativeView
+                              clickableAssetViews:@{
+                                                    YumiMediationUnifiedNativeTitleAsset : self.zplayNativeView.title,
+                                                    YumiMediationUnifiedNativeCoverImageAsset : self.zplayNativeView.coverImage,
+                                                    YumiMediationUnifiedNativeIconAsset : self.zplayNativeView.icon,
+                                                    YumiMediationUnifiedNativeCallToActionAsset : self.zplayNativeView.callToAction
+                                                    }
+                               withViewController:self
+                                         nativeAd:self.nativeAdArray.firstObject];
+    [self.nativeAd reportImpression:self.nativeAdArray.firstObject view:self.zplayNativeView];
+
+    [self.view addSubview:self.zplayNativeView];
 }
 
 - (IBAction)removeAndDestoryAd:(id)sender {
+    if (!self.zplayNativeView) {
+        return;
+    }
     dispatch_async(dispatch_get_main_queue(), ^{
-//        [self.zplayNativeView removeFromSuperview];
-//        self.zplayNativeView = nil;
-//        [self.nativeAdArray removeAllObjects];
-//        self.nativeAdArray = nil;
-        [self.view1 removeFromSuperview];
-        self.view1 = nil;
+        [self.zplayNativeView removeFromSuperview];
+        self.zplayNativeView = nil;
+        [self.nativeAdArray removeAllObjects];
+        self.nativeAdArray = nil;
     });
 }
 
