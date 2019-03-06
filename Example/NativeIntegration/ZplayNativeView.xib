@@ -17,25 +17,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="212-WP-y0l">
-                    <rect key="frame" x="10" y="10" width="40" height="40"/>
+                    <rect key="frame" x="10" y="13" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="212-WP-y0l" secondAttribute="height" multiplier="1:1" id="UrA-9t-Lw7"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5IU-t1-00F">
-                    <rect key="frame" x="50" y="55" width="200" height="104.5"/>
+                    <rect key="frame" x="50" y="58" width="200" height="104.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="5IU-t1-00F" secondAttribute="height" multiplier="1.91:1" id="bqD-rW-O1W"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0W-NL-iPe">
-                    <rect key="frame" x="60" y="10" width="230" height="40"/>
+                    <rect key="frame" x="60" y="13" width="230" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpl-rp-SfH">
-                    <rect key="frame" x="25" y="164.5" width="250" height="30"/>
+                    <rect key="frame" x="25" y="167.5" width="250" height="30"/>
                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -49,13 +49,13 @@
                 <constraint firstItem="212-WP-y0l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="Eg1-0f-dP4"/>
                 <constraint firstItem="r0W-NL-iPe" firstAttribute="centerY" secondItem="212-WP-y0l" secondAttribute="centerY" id="On1-Wn-nMK"/>
                 <constraint firstItem="cpl-rp-SfH" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" constant="-170" id="X1E-3H-fwa"/>
-                <constraint firstItem="212-WP-y0l" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="ZiO-Mu-yDm"/>
+                <constraint firstItem="212-WP-y0l" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="13" id="ZiO-Mu-yDm"/>
                 <constraint firstItem="212-WP-y0l" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-260" id="a5m-cu-U4y"/>
                 <constraint firstItem="cpl-rp-SfH" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-50" id="aHO-ZK-N1M"/>
                 <constraint firstItem="5IU-t1-00F" firstAttribute="top" secondItem="212-WP-y0l" secondAttribute="bottom" constant="5" id="fry-uo-xKz"/>
                 <constraint firstItem="cpl-rp-SfH" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="gNZ-Ph-9pX"/>
                 <constraint firstItem="5IU-t1-00F" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-100" id="jBD-fR-q4b"/>
-                <constraint firstItem="r0W-NL-iPe" firstAttribute="width" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="width" constant="-70" id="qRI-aP-nYr"/>
+                <constraint firstItem="r0W-NL-iPe" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-70" id="qRI-aP-nYr"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="r0W-NL-iPe" secondAttribute="trailing" constant="10" id="tmA-9T-hme"/>
                 <constraint firstItem="cpl-rp-SfH" firstAttribute="top" secondItem="5IU-t1-00F" secondAttribute="bottom" constant="5" id="z6W-fN-ytA"/>
             </constraints>

@@ -148,16 +148,14 @@
 		6003F593195388D20070C39A /* Example for NativeIntegration */ = {
 			isa = PBXGroup;
 			children = (
-				5B40C667222FA43B00A14B4C /* ZplayNativeView.h */,
-				5B40C668222FA43B00A14B4C /* ZplayNativeView.m */,
-				5B40C669222FA43B00A14B4C /* ZplayNativeView.xib */,
 				6003F59C195388D20070C39A /* ZplayAppDelegate.h */,
 				6003F59D195388D20070C39A /* ZplayAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* ZplayViewController.h */,
 				6003F5A6195388D20070C39A /* ZplayViewController.m */,
-				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
+				5B40C667222FA43B00A14B4C /* ZplayNativeView.h */,
+				5B40C668222FA43B00A14B4C /* ZplayNativeView.m */,
+				5B40C669222FA43B00A14B4C /* ZplayNativeView.xib */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for NativeIntegration";
@@ -167,6 +165,8 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F595195388D20070C39A /* NativeIntegration-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,

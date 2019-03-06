@@ -62,6 +62,15 @@
                                     <action selector="removeAndDestoryAd:" destination="whP-gf-Uak" eventType="touchUpInside" id="CSE-8O-uct"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0C-rQ-IL3">
+                                <rect key="frame" x="37.5" y="463.5" width="300" height="128"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Z0C-rQ-IL3" secondAttribute="height" multiplier="75:32" id="vTV-gK-WlR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -75,12 +84,16 @@
                             <constraint firstItem="mw9-Xf-lFS" firstAttribute="width" secondItem="Ph4-O1-vXQ" secondAttribute="width" id="Mmi-ke-TcS"/>
                             <constraint firstItem="mw9-Xf-lFS" firstAttribute="top" secondItem="Ph4-O1-vXQ" secondAttribute="bottom" constant="5" id="Q8d-6N-3lY"/>
                             <constraint firstItem="mw9-Xf-lFS" firstAttribute="height" secondItem="Ph4-O1-vXQ" secondAttribute="height" id="aai-MT-EUd"/>
+                            <constraint firstItem="Z0C-rQ-IL3" firstAttribute="top" secondItem="mw9-Xf-lFS" secondAttribute="bottom" constant="5" id="cEg-Go-3vD"/>
+                            <constraint firstItem="Z0C-rQ-IL3" firstAttribute="centerX" secondItem="mw9-Xf-lFS" secondAttribute="centerX" id="dCQ-Wr-qZS"/>
+                            <constraint firstItem="Z0C-rQ-IL3" firstAttribute="width" secondItem="mw9-Xf-lFS" secondAttribute="width" id="gec-ZZ-J47"/>
                             <constraint firstItem="G2R-Fg-UZg" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="120" id="hEz-sQ-gPa"/>
                             <constraint firstItem="H0x-jg-VWY" firstAttribute="centerX" secondItem="G2R-Fg-UZg" secondAttribute="centerX" id="wA4-PO-f47"/>
                             <constraint firstItem="mw9-Xf-lFS" firstAttribute="centerX" secondItem="Ph4-O1-vXQ" secondAttribute="centerX" id="yve-B1-XZN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="console" destination="Z0C-rQ-IL3" id="EEi-PU-RFU"/>
                         <outlet property="nativeAdBackgroundView" destination="G2R-Fg-UZg" id="y5r-Vk-eD8"/>
                     </connections>
                 </viewController>

@@ -15,10 +15,11 @@
 
 @interface ZplayViewController () <YumiMediationNativeAdDelegate>
 @property (weak, nonatomic) IBOutlet UIView *nativeAdBackgroundView;
+@property (weak, nonatomic) IBOutlet UITextView *console;
 @property (nonatomic) YumiMediationNativeAd *nativeAd;
 @property (nonatomic) NSMutableArray<YumiMediationNativeModel *> *nativeAdArray;
 @property (nonatomic) ZplayNativeView *zplayNativeView;
-@property (nonatomic) UIView *view1;
+@property (nonatomic) NSString *nativeLog;
 @end
 
 @implementation ZplayViewController
@@ -26,10 +27,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.console.editable = NO;
 }
 
 - (IBAction)loadAd:(id)sender {
-    [self.nativeAd loadAd:1];
+    int adCount = 1;
+    [self.nativeAd loadAd:adCount];
+    [self showLogConsoleWith:[NSString stringWithFormat:@"native is loading... load number is %d",adCount]];
 }
 
 - (IBAction)registerAndShowAd:(id)sender {
@@ -37,7 +41,7 @@
     self.zplayNativeView.frame = self.nativeAdBackgroundView.frame;
 
     if (!self.nativeAdArray || [self.nativeAdArray.firstObject isExpired]) {
-        NSLog(@"native ad is invalid");
+        [self showLogConsoleWith:@"native ad is invalid"];
         return;
     }
     self.zplayNativeView.icon.image = self.nativeAdArray.firstObject.icon.image;
@@ -57,6 +61,7 @@
     [self.nativeAd reportImpression:self.nativeAdArray.firstObject view:self.zplayNativeView];
 
     [self.view addSubview:self.zplayNativeView];
+    [self showLogConsoleWith:@"nativeAd is showing"];
 }
 
 - (IBAction)removeAndDestoryAd:(id)sender {
@@ -68,6 +73,7 @@
         self.zplayNativeView = nil;
         [self.nativeAdArray removeAllObjects];
         self.nativeAdArray = nil;
+        self.nativeLog = nil;
     });
 }
 
@@ -75,17 +81,32 @@
 /// Tells the delegate that an ad has been successfully loaded.
 - (void)yumiMediationNativeAdDidLoad:(NSArray<YumiMediationNativeModel *> *)nativeAdArray {
     self.nativeAdArray = [NSMutableArray arrayWithArray:nativeAdArray];
-    NSLog(@"nativeAd is loaded");
+    [self showLogConsoleWith:@"nativeAd is loaded"];
 }
 
 /// Tells the delegate that a request failed.
 - (void)yumiMediationNativeAd:(YumiMediationNativeAd *)nativeAd didFailWithError:(YumiMediationError *)error {
-    NSLog(@"nativeAd is fail to load ");
+    [self showLogConsoleWith:@"nativeAd is fail to load"];
 }
 
 /// Tells the delegate that the Native view has been clicked.
 - (void)yumiMediationNativeAdDidClick:(YumiMediationNativeModel *)nativeAd {
-    NSLog(@"nativeAd is clicked");
+    [self showLogConsoleWith:@"nativeAd is clicked"];
+}
+
+- (void)showLogConsoleWith:(NSString *)log {
+    NSDate *date = [NSDate date];
+    NSDateFormatter *formateDate = [[NSDateFormatter alloc] init];
+    [formateDate setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *dataString = [formateDate stringFromDate:date];
+    NSString *formateLog = [NSString stringWithFormat:@"%@ : %@ \n", dataString, log];
+    if (!self.nativeLog) {
+        self.nativeLog = @"";
+    }
+    self.nativeLog = [self.nativeLog stringByAppendingString:formateLog];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.console.text = self.nativeLog;
+    });
 }
 
 - (YumiMediationNativeAd *)nativeAd {
