@@ -27,14 +27,14 @@
                         <constraint firstAttribute="width" secondItem="5IU-t1-00F" secondAttribute="height" multiplier="1.91:1" id="bqD-rW-O1W"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0W-NL-iPe">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0W-NL-iPe">
                     <rect key="frame" x="54" y="13" width="210" height="39"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpl-rp-SfH">
-                    <rect key="frame" x="15" y="195.5" width="270" height="35.5"/>
+                    <rect key="frame" x="18" y="195.5" width="264" height="35.5"/>
                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -51,7 +51,7 @@
                 <constraint firstItem="cpl-rp-SfH" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.15" id="X1E-3H-fwa"/>
                 <constraint firstItem="212-WP-y0l" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="ZiO-Mu-yDm"/>
                 <constraint firstItem="212-WP-y0l" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.13" id="a5m-cu-U4y"/>
-                <constraint firstItem="cpl-rp-SfH" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="aHO-ZK-N1M"/>
+                <constraint firstItem="cpl-rp-SfH" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.88" id="aHO-ZK-N1M"/>
                 <constraint firstItem="5IU-t1-00F" firstAttribute="top" secondItem="212-WP-y0l" secondAttribute="bottom" constant="5" id="fry-uo-xKz"/>
                 <constraint firstItem="cpl-rp-SfH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gNZ-Ph-9pX"/>
                 <constraint firstItem="5IU-t1-00F" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.85" id="jBD-fR-q4b"/>
