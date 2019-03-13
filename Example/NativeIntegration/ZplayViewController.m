@@ -12,6 +12,12 @@
 #import "ZplayNativeView.h"
 
 #define YumiNativePlacementID @"atb3ke1i"
+#define SCREEN_SIZE [UIScreen mainScreen].bounds.size
+#define SCREEN_WIDTH SCREEN_SIZE.width
+#define SCREEN_HEIGHT SCREEN_SIZE.height
+#define DefaultScreenWidth 375.0
+#define DefaultScreenHeight 667.0
+#define AdaptedValue6(x) (round((x) * (SCREEN_WIDTH / 375.0f)))
 
 @interface ZplayViewController () <YumiMediationNativeAdDelegate>
 @property (weak, nonatomic) IBOutlet UIView *nativeAdBackgroundView;
