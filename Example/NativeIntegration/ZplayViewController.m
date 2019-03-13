@@ -37,13 +37,12 @@
 }
 
 - (IBAction)registerAndShowAd:(id)sender {
-    self.zplayNativeView = [[NSBundle mainBundle] loadNibNamed:@"ZplayNativeView" owner:nil options:nil].firstObject;
-    self.zplayNativeView.frame = self.nativeAdBackgroundView.frame;
-
-    if (!self.nativeAdArray || [self.nativeAdArray.firstObject isExpired]) {
+    if (!self.nativeAdArray || self.nativeAdArray.count == 0 || [self.nativeAdArray.firstObject isExpired]) {
         [self showLogConsoleWith:@"native ad is invalid"];
         return;
     }
+    self.zplayNativeView = [[NSBundle mainBundle] loadNibNamed:@"ZplayNativeView" owner:nil options:nil].firstObject;
+    self.zplayNativeView.frame = self.nativeAdBackgroundView.frame;
     self.zplayNativeView.icon.image = self.nativeAdArray.firstObject.icon.image;
     self.zplayNativeView.title.text = self.nativeAdArray.firstObject.title;
     self.zplayNativeView.coverImage.image = self.nativeAdArray.firstObject.coverImage.image;
