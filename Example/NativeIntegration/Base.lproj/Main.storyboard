@@ -22,15 +22,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2R-Fg-UZg">
-                                <rect key="frame" x="37.5" y="140" width="300" height="200"/>
+                                <rect key="frame" x="37.5" y="70" width="300" height="235"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="DyC-WP-zDp"/>
-                                    <constraint firstAttribute="height" constant="200" id="v4W-A3-KwW"/>
+                                    <constraint firstAttribute="height" constant="235" id="v4W-A3-KwW"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0x-jg-VWY">
-                                <rect key="frame" x="37.5" y="370" width="300" height="26"/>
+                                <rect key="frame" x="37.5" y="335" width="300" height="26"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="H0x-jg-VWY" secondAttribute="height" multiplier="23:2" id="daU-LO-Qf9"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph4-O1-vXQ">
-                                <rect key="frame" x="37.5" y="401" width="300" height="26"/>
+                                <rect key="frame" x="37.5" y="366" width="300" height="26"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="RegisterAndShowAd">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mw9-Xf-lFS">
-                                <rect key="frame" x="37.5" y="432" width="300" height="26.5"/>
+                                <rect key="frame" x="37.5" y="397" width="300" height="26.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="RemoveAndDestoryAd">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,7 +63,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0C-rQ-IL3">
-                                <rect key="frame" x="37.5" y="463.5" width="300" height="128"/>
+                                <rect key="frame" x="37.5" y="428.5" width="300" height="128"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Z0C-rQ-IL3" secondAttribute="height" multiplier="75:32" id="vTV-gK-WlR"/>
@@ -87,7 +87,7 @@
                             <constraint firstItem="Z0C-rQ-IL3" firstAttribute="top" secondItem="mw9-Xf-lFS" secondAttribute="bottom" constant="5" id="cEg-Go-3vD"/>
                             <constraint firstItem="Z0C-rQ-IL3" firstAttribute="centerX" secondItem="mw9-Xf-lFS" secondAttribute="centerX" id="dCQ-Wr-qZS"/>
                             <constraint firstItem="Z0C-rQ-IL3" firstAttribute="width" secondItem="mw9-Xf-lFS" secondAttribute="width" id="gec-ZZ-J47"/>
-                            <constraint firstItem="G2R-Fg-UZg" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="120" id="hEz-sQ-gPa"/>
+                            <constraint firstItem="G2R-Fg-UZg" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="50" id="hEz-sQ-gPa"/>
                             <constraint firstItem="H0x-jg-VWY" firstAttribute="centerX" secondItem="G2R-Fg-UZg" secondAttribute="centerX" id="wA4-PO-f47"/>
                             <constraint firstItem="mw9-Xf-lFS" firstAttribute="centerX" secondItem="Ph4-O1-vXQ" secondAttribute="centerX" id="yve-B1-XZN"/>
                         </constraints>
